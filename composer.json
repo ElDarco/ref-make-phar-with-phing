@@ -1,0 +1,16 @@
+{
+    "name": "eldarco/ref-make-phar-with-phing",
+    "require-dev": {
+        "phing/phing": "^2.16"
+    },
+    "authors": [
+        {
+            "name": "Aleksey Leshshuk",
+            "email": "leshchuk05@gmail.com"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "build-phar": "php -Cdphar.readonly=0 -qC vendor/bin/phing build\n"
+    }
+}

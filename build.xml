@@ -1,0 +1,22 @@
+<project name="make_project" basedir="./" default="build">
+    <target name="phar_build">
+        <pharpackage
+            destfile="./build/hello_world.phar"
+            basedir="./src">
+            <fileset dir=".">
+                <include name="**/index.php" />
+            </fileset>
+            <metadata>
+                <element name="version" value="1.0" />
+                <element name="authors">
+                    <element name="Aleksey Leshchuk">
+                        <element name="e-mail" value="leshchuk05@gmail.com" />
+                    </element>
+                </element>
+            </metadata>
+        </pharpackage>
+    </target>
+
+    <target name="build" depends="phar_build">
+    </target>
+</project>
